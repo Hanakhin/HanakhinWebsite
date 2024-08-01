@@ -7,7 +7,16 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Configuration CORS
+const corsOptions = {
+    origin: 'https://hanakhin.github.io/PortfolioSerious',
+    optionsSuccessStatus: 200
+};
+
+// Appliquer CORS avec les options spécifiées
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Configurer le transporteur Nodemailer
@@ -21,13 +30,13 @@ const transporter = nodemailer.createTransport({
 
 // Route pour envoyer des emails
 app.post('/send-email', async (req, res) => {
-    const { name, email, message,subject } = req.body;
+    const { name, email, message, subject } = req.body;
 
     try {
         await transporter.sendMail({
-            from: `"${name}" <${process.env.SMTP_USER}>`, // Remplacez par votre nom
-            to: "snow44111@gmail.com", // Remplacez par l'adresse du destinataire
-            subject: `subject: ${subject}`,
+            from: `"${name}" <${process.env.SMTP_USER}>`,
+            to: "snow44111@gmail.com",
+            subject: `Subject: ${subject}`,
             text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
         });
 
