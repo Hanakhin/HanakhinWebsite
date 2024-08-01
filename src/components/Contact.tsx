@@ -22,8 +22,8 @@ const Contact: React.FC = () => {
                 alert('Message envoyé avec succès !');
                 setName('');
                 setEmail('');
-                setMessage('');
                 setSubject('');
+                setMessage('');
             } else {
                 throw new Error('Erreur lors de l\'envoi du message');
             }
