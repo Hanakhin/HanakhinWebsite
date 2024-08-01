@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
         setStatusMessage({ type: null, content: '' });
 
         emailjs
-            .sendForm( import.meta.env.EMAILJS_SERVICEID ,import.meta.env.EMAILJS_TEMPLATEID, form.current!, import.meta.env.PUBLICKEY)
+            .sendForm( import.meta.env.VITE_EMAILJS_SERVICEID ,import.meta.env.VITE_EMAILJS_TEMPLATEID, form.current!, import.meta.env.VITE_PUBLICKEY)
             .then(
                 () => {
                     setStatusMessage({ type: 'success', content: 'Message envoyé avec succès !' });
