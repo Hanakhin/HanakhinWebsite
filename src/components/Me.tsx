@@ -6,7 +6,7 @@ const Me: React.FC = () => {
         <section className="h-screen flex items-center justify-center">
             <div className="glass p-8 rounded-xl shadow-lg max-w-4xl flex flex-col md:flex-row bg-white bg-opacity-20 backdrop-blur-lg">
                 <div className="md:w-1/3 mb-6 md:mb-0 md:mr-8">
-                    <img src="/ressources/me.jpeg" alt="Votre photo" className="w-full rounded-lg object-fill " />
+                    <img src="/PortfolioSerious/ressources/me.jpeg" alt="Votre photo" className="w-full rounded-lg object-fill " />
                 </div>
                 <div className="md:w-2/3 flex flex-col justify-between">
                     <div>

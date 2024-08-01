@@ -10,20 +10,20 @@ interface Skill {
 
 // Data
 const skillsData: Skill[] = [
-    { name: "HTML", icon: "/icons/html5.svg", level: 90, url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { name: "CSS", icon: "/icons/css3.svg", level: 90, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-    { name: "React.js", icon: "/icons/react.svg", level: 70, url: "https://reactjs.org/" },
-    { name: "Next.js", icon: "/icons/nextjs.svg", level: 30, url: "https://nextjs.org/" },
-    { name: "JavaScript", icon: "/icons/javascript.svg", level: 70, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { name: "PHP", icon: "/icons/php.svg", level: 60, url: "https://www.php.net/" },
-    { name: "Symfony", icon: "/icons/symfony.svg", level: 60, url: "https://symfony.com/" },
-    { name: "Figma", icon: "/icons/figma.svg", level: 70, url: "https://www.figma.com/" },
-    { name: "Node.Js", icon: "/icons/nodejs.svg", level: 70, url: "https://nodejs.org/" },
-    { name: "Docker", icon: "/icons/docker.svg", level: 70, url: "https://www.docker.com/" },
-    { name: "Blender", icon: "/icons/blender.svg", level: 70, url: "https://www.blender.org/" },
-    { name: "Unreal Engine", icon: "/icons/ue5.svg", level: 70, url: "https://www.unrealengine.com/" },
-    { name: "WordPress", icon: "/icons/wp.svg", level: 70, url: "https://www.wordpress.fr/" },
-    { name: "Tailwind", icon: "/icons/tw.svg", level: 70, url: "https://www.tailwind.fr/" },
+    { name: "HTML", icon: "/PortfolioSerious/icons/html5.svg", level: 90, url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS", icon: "/PortfolioSerious/icons/css3.svg", level: 90, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "React.js", icon: "/PortfolioSerious/icons/react.svg", level: 70, url: "https://reactjs.org/" },
+    { name: "Next.js", icon: "/PortfolioSerious/icons/nextjs.svg", level: 30, url: "https://nextjs.org/" },
+    { name: "JavaScript", icon: "/PortfolioSerious/icons/javascript.svg", level: 70, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "PHP", icon: "/PortfolioSerious/icons/php.svg", level: 60, url: "https://www.php.net/" },
+    { name: "Symfony", icon: "/PortfolioSerious/icons/symfony.svg", level: 60, url: "https://symfony.com/" },
+    { name: "Figma", icon: "/PortfolioSerious/icons/figma.svg", level: 70, url: "https://www.figma.com/" },
+    { name: "Node.Js", icon: "/PortfolioSerious/icons/nodejs.svg", level: 70, url: "https://nodejs.org/" },
+    { name: "Docker", icon: "/PortfolioSerious/icons/docker.svg", level: 70, url: "https://www.docker.com/" },
+    { name: "Blender", icon: "/PortfolioSerious/icons/blender.svg", level: 70, url: "https://www.blender.org/" },
+    { name: "Unreal Engine", icon: "/PortfolioSerious/icons/ue5.svg", level: 70, url: "https://www.unrealengine.com/" },
+    { name: "WordPress", icon: "/PortfolioSerious/icons/wp.svg", level: 70, url: "https://www.wordpress.fr/" },
+    { name: "Tailwind", icon: "/PortfolioSerious/icons/tw.svg", level: 70, url: "https://www.tailwind.fr/" },
 ];
 
 // Components

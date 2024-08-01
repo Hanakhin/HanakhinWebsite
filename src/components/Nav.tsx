@@ -42,7 +42,7 @@ const Nav: React.FC<NavProps> = ({ pages, onPageChange, currentPage }) => {
     return (
         <header className="glass fixed w-full p-4 z-50 bg-white bg-opacity-20 backdrop-blur-lg shadow-lg">
             <nav className="container mx-auto flex justify-between items-center">
-                <img src="/Logo/logo.png" alt="logo" height="56px" width="56px" className="mr-2"/>
+                <img src="/PortfolioSerious/Logo/logo.png" alt="logo" height="56px" width="56px" className="mr-2"/>
 
                 {/* Menu hamburger pour mobile */}
                 <button className="lg:hidden text-gray-800" onClick={toggleMenu}>

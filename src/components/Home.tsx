@@ -8,7 +8,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ onPageChange }) => {
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/ressources/CV.pdf'; // Chemin vers votre CV
+        link.href = '/PortfolioSerious/ressources/CV.pdf'; // Chemin vers votre CV
         link.setAttribute('download', 'CV.pdf'); // Nom du fichier à télécharger
         document.body.appendChild(link);
         link.click();
