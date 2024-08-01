@@ -51,7 +51,7 @@ const SkillGrid: React.FC<{ skills: Skill[] }> = ({ skills }) => (
 // Main component
 const Skills: React.FC = () => {
     return (
-        <section id="skills" className="py-20 h-screen overflow-y-auto">
+        <section id="skills" className="py-20 overflow-y-auto">
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-center text-black">Mes Compétences</h2>
                 <div className="glass p-8 rounded-xl shadow-lg bg-white bg-opacity-20 backdrop-blur-lg">
