@@ -4,10 +4,11 @@ const Contact: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [subject, setSubject] = useState('');
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
+        console.log('ok')
         try {
             const response = await fetch('http://localhost:3001/send-email', {
                 method: 'POST',
@@ -22,6 +23,7 @@ const Contact: React.FC = () => {
                 setName('');
                 setEmail('');
                 setMessage('');
+                setSubject('');
             } else {
                 throw new Error('Erreur lors de l\'envoi du message');
             }
@@ -52,6 +54,14 @@ const Contact: React.FC = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
+                        />
+                        <input
+                        type="text"
+                        placeholder="subject"
+                        className="glass w-full p-2 mb-4 rounded"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
+                        required
                         />
                         <textarea
                             placeholder="Message"
