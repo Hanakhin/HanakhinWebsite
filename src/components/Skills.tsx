@@ -17,6 +17,10 @@ const skillsData: Skill[] = [
     { name: "PHP", icon: "/icons/php.svg", level: 60 },
     { name: "Symfony", icon: "/icons/symfony.svg", level: 60 },
     { name: "Figma", icon: "/icons/figma.svg", level: 70 },
+    { name: "Node.Js", icon: "/icons/nodejs.svg", level: 70 },
+    { name: "Docker", icon: "/icons/docker.svg", level: 70 },
+    { name: "Blender", icon: "/icons/blender.svg", level: 70 },
+    { name: "Unreal Engine ", icon: "/icons/ue5.svg", level: 70 },
 ];
 
 // Components

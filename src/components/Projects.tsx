@@ -4,9 +4,9 @@ import ProjectsSection from './projectCard';
 const projects= [
     { name: "AtomusProject", language: "React", imgUrl: "/projectsImg/AtomusV1/homepage.png" },
     { name: "AirBnb", language: "PHP", imgUrl: "/projectsImg/TPairbnb/homepage.png" },
-    { name: "VideoGameTs", language: "React/Ts", imgUrl: "/projectsImg/VideoGameTs/homepage.png" },
+    { name: "VideoGameTs", language: "React/Ts // M.E.R.N stack", imgUrl: "/projectsImg/VideoGameTs/homepage.png" },
     { name: "ExctinguisherGestion", language: "PHP/Symfony", imgUrl: "/projectsImg/exctincteurTpSymfonyV2/homepage.png" },
-    { name: "CRUD Project", language: "React/Ts", imgUrl: "/projectsImg/CrudProject/homepage.png" },
+    { name: "CRUD Project", language: "React/Ts // M.E.R.N stack", imgUrl: "/projectsImg/CrudProject/homepage.png" },
 
 ];
 
