@@ -14,13 +14,15 @@ const Contact: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [statusMessage, setStatusMessage] = useState<StatusMessage>({ type: null, content: '' });
 
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
         setStatusMessage({ type: null, content: '' });
 
         try {
-            const response = await fetch('http://localhost:3001/send-email', {
+            const response = await fetch(`${apiUrl}/send-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

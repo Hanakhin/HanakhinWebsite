@@ -10,7 +10,7 @@ const app = express();
 
 // Configuration CORS
 const corsOptions = {
-    origin: 'https://hanakhin.github.io/PortfolioSerious',
+    origin: ['https://hanakhin.github.io/PortfolioSerious','http://localhost:3000'],
     optionsSuccessStatus: 200
 };
 
@@ -48,5 +48,5 @@ app.post('/send-email', async (req, res) => {
 });
 
 // Démarrer le serveur
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Serveur en cours d'exécution sur le port ${PORT}`));
