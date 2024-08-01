@@ -23,6 +23,7 @@ const skillsData: Skill[] = [
     { name: "Blender", icon: "/icons/blender.svg", level: 70, url: "https://www.blender.org/" },
     { name: "Unreal Engine", icon: "/icons/ue5.svg", level: 70, url: "https://www.unrealengine.com/" },
     { name: "WordPress", icon: "/icons/wp.svg", level: 70, url: "https://www.wordpress.fr/" },
+    { name: "Tailwind", icon: "/icons/tw.svg", level: 70, url: "https://www.tailwind.fr/" },
 ];
 
 // Components
