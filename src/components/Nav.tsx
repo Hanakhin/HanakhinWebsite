@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineHome, AiOutlineUser, AiOutlineProject, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineUser, AiOutlineProject, AiOutlineMail,AiOutlineLink } from 'react-icons/ai';
 import { BsCodeSlash } from 'react-icons/bs';
 
 interface NavProps {
@@ -11,7 +11,7 @@ interface NavProps {
 const Nav: React.FC<NavProps> = ({ pages, onPageChange, currentPage }) => {
     const getIcon = (page: string) => {
         switch (page.toLowerCase()) {
-            case 'accueil':
+            case 'home':
                 return <AiOutlineHome className="mr-1" />;
             case 'à propos':
                 return <AiOutlineUser className="mr-1" />;
@@ -21,6 +21,8 @@ const Nav: React.FC<NavProps> = ({ pages, onPageChange, currentPage }) => {
                 return <BsCodeSlash className="mr-1" />;
             case 'contact':
                 return <AiOutlineMail className="mr-1" />;
+            case 'me':
+                return <AiOutlineLink className="mr-1" />;
             default:
                 return null;
         }
