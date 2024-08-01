@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { FaPaperPlane } from 'react-icons/fa';
 
 interface StatusMessage {
@@ -7,44 +8,29 @@ interface StatusMessage {
 }
 
 const Contact: React.FC = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+    const form = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [statusMessage, setStatusMessage] = useState<StatusMessage>({ type: null, content: '' });
 
-    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
-
-    const handleSubmit = async (e: React.FormEvent) => {
+    const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
         setStatusMessage({ type: null, content: '' });
 
-        try {
-            const response = await fetch(`${apiUrl}/send-email`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
+        emailjs
+            .sendForm( process.env.EMAILJS_SERVICEID, process.env.EMAILJS_TEMPLATEID, form.current!, process.env.PUBLICKEY)
+            .then(
+                () => {
+                    setStatusMessage({ type: 'success', content: 'Message envoyé avec succès !' });
+                    form.current!.reset();
                 },
-                body: JSON.stringify({ name, email, subject, message }),
+                (error) => {
+                    setStatusMessage({ type: 'error', content: `Erreur lors de l'envoi du message: ${error.text}` });
+                }
+            )
+            .finally(() => {
+                setIsSubmitting(false);
             });
-
-            if (response.ok) {
-                setStatusMessage({ type: 'success', content: 'Message envoyé avec succès !' });
-                setName('');
-                setEmail('');
-                setSubject('');
-                setMessage('');
-            } else {
-                throw new Error('Erreur lors de l\'envoi du message');
-            }
-        } catch (error) {
-            console.error('Erreur:', error);
-            setStatusMessage({ type: 'error', content: 'Une erreur est survenue, veuillez réessayer.' });
-        } finally {
-            setIsSubmitting(false);
-        }
     };
 
     return (
@@ -59,26 +45,24 @@ const Contact: React.FC = () => {
                             {statusMessage.content}
                         </div>
                     )}
-                    <form onSubmit={handleSubmit}>
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className="mb-4">
-                            <label htmlFor="name" className="block text-black mb-2">Nom</label>
+                            <label htmlFor="user_name" className="block text-black mb-2">Nom</label>
                             <input
-                                id="name"
+                                id="user_name"
                                 type="text"
+                                name="user_name"
                                 className="glass w-full p-2 rounded bg-white bg-opacity-40 text-black"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
                                 required
                             />
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="email" className="block text-black mb-2">Email</label>
+                            <label htmlFor="user_email" className="block text-black mb-2">Email</label>
                             <input
-                                id="email"
+                                id="user_email"
                                 type="email"
+                                name="user_email"
                                 className="glass w-full p-2 rounded bg-white bg-opacity-40 text-black"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                         </div>
@@ -87,9 +71,8 @@ const Contact: React.FC = () => {
                             <input
                                 id="subject"
                                 type="text"
+                                name="subject"
                                 className="glass w-full p-2 rounded bg-white bg-opacity-40 text-black"
-                                value={subject}
-                                onChange={(e) => setSubject(e.target.value)}
                                 required
                             />
                         </div>
@@ -97,9 +80,8 @@ const Contact: React.FC = () => {
                             <label htmlFor="message" className="block text-black mb-2">Message</label>
                             <textarea
                                 id="message"
+                                name="message"
                                 className="glass w-full p-2 rounded h-32 bg-white bg-opacity-40 text-black resize-none"
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
                                 required
                             ></textarea>
                         </div>
