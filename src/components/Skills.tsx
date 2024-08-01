@@ -22,14 +22,14 @@ const skillsData: Skill[] = [
 // Components
 const SkillIcon: React.FC<{ skill: Skill }> = ({ skill }) => (
     <div className="flex flex-col items-center">
-        <div className="glass w-20 h-20 rounded-full flex items-center justify-center mb-2">
+        <div className="glass w-20 h-20 rounded-full flex items-center justify-center mb-2 bg-white bg-opacity-20 backdrop-blur-lg">
             <img
                 src={skill.icon}
                 alt={skill.name}
                 className="w-10 h-10"
             />
         </div>
-        <span className="text-center">{skill.name}</span>
+        <span className="text-center text-black">{skill.name}</span>
     </div>
 );
 
@@ -46,8 +46,8 @@ const Skills: React.FC = () => {
     return (
         <section id="skills" className="py-20">
             <div className="container mx-auto">
-                <h2 className="text-3xl font-bold mb-8 text-center">Mes Compétences</h2>
-                <div className="glass p-8 rounded-xl shadow-lg">
+                <h2 className="text-3xl font-bold mb-8 text-center text-black">Mes Compétences</h2>
+                <div className="glass p-8 rounded-xl shadow-lg bg-white bg-opacity-20 backdrop-blur-lg">
                     <SkillGrid skills={skillsData} />
                 </div>
             </div>
