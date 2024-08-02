@@ -2,8 +2,21 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="glass py-4 text-center bg-white bg-opacity-20 backdrop-blur-lg">
-            <p className="text-white">&copy; 2024 Votre Nom. Tous droits réservés.</p>
+        <footer className="bg-gray-800 text-white py-6">
+            <div className="container mx-auto text-center">
+                <p className="mb-4">© {new Date().getFullYear()} Hanakhin Nouni-Massotte. Tous droits réservés.</p>
+                <div className="flex justify-center space-x-4">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+                        GitHub
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+                        Twitter
+                    </a>
+                </div>
+            </div>
         </footer>
     );
 }

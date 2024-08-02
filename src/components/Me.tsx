@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importez les icônes dont vous avez besoin
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import NavButton from "./NavButton.tsx"; // Importez les icônes dont vous avez besoin
 
 const Me: React.FC = () => {
     return (

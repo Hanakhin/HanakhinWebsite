@@ -1,11 +1,12 @@
 import React from 'react';
+import NavButton from "./NavButton";
 
 // Types
 interface Skill {
     name: string;
     icon: string;
     level: number;
-    url: string;  // Nouvelle propriété pour l'URL
+    url: string;
 }
 
 // Data
@@ -49,11 +50,12 @@ const SkillGrid: React.FC<{ skills: Skill[] }> = ({ skills }) => (
 );
 
 // Main component
-const Skills: React.FC = () => {
+const Skills: React.FC<{ onPageChange: (direction: 'prev' | 'next') => void }> = ({ onPageChange }) => {
     return (
         <section id="skills" className="py-20 overflow-y-auto">
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-center text-black">Mes Compétences</h2>
+                <NavButton onPageChange={onPageChange} />
                 <div className="glass p-8 rounded-xl shadow-lg bg-white bg-opacity-20 backdrop-blur-lg">
                     <SkillGrid skills={skillsData} />
                 </div>

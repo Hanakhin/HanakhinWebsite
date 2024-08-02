@@ -1,13 +1,14 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaPaperPlane } from 'react-icons/fa';
+import NavButton from "./NavButton.tsx";
 
 interface StatusMessage {
     type: 'success' | 'error' | null;
     content: string;
 }
 
-const Contact: React.FC = () => {
+const Contact: React.FC<{onPageChange:(direction : 'prev' | 'next')=>void}> = ({onPageChange}) => {
     const form = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [statusMessage, setStatusMessage] = useState<StatusMessage>({ type: null, content: '' });
@@ -37,6 +38,7 @@ const Contact: React.FC = () => {
         <section id="contact" className="py-20">
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold mb-8 text-center text-black">Contactez-moi</h2>
+                <NavButton onPageChange={onPageChange} />
                 <div className="glass p-8 rounded-xl shadow-lg max-w-2xl mx-auto bg-white bg-opacity-20 backdrop-blur-lg">
                     {statusMessage.type && (
                         <div className={`mb-4 p-3 rounded ${
