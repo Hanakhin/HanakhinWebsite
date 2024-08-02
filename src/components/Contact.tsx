@@ -19,14 +19,14 @@ const Contact: React.FC<{onPageChange:(direction : 'prev' | 'next')=>void}> = ({
         setStatusMessage({ type: null, content: '' });
 
         emailjs
-            .sendForm( import.meta.env.VITE_EMAILJS_SERVICE_ID ,import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current!, import.meta.env.VITE_PUBLICKEY)
+            .sendForm( import.meta.env.VITE_EMAILJS_SERVICE_ID ,import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current!, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
             .then(
                 () => {
                     setStatusMessage({ type: 'success', content: 'Message envoyé avec succès !' });
                     form.current!.reset();
                 },
                 (error) => {
-                    setStatusMessage({ type: 'error', content: `Erreur lors de l'envoi du message: ${error.text}` });
+                    setStatusMessage({ type: 'error', content: `Erreur lors de l'envoi du message: ${error}` });
                 }
             )
             .finally(() => {
