@@ -65,3 +65,42 @@ section{
   max-height: 100vh;
 }
 
+.nav-button {
+  @apply w-12 h-12 rounded-full bg-white bg-opacity-50 hover:bg-opacity-70
+  transition-all duration-300 flex items-center justify-center
+  shadow-md hover:shadow-lg focus:outline-none focus:ring-2
+  focus:ring-offset-2 focus:ring-blue-500;
+}
+
+.nav-button:hover {
+  @apply transform scale-110;
+}
+
+.nav-button:active {
+  @apply transform scale-95;
+}
+
+.prev-button {
+  @apply hover:bg-blue-100;
+}
+
+.next-button {
+  @apply hover:bg-purple-100;
+}
+
+.nav-button svg {
+  @apply text-gray-600;
+}
+
+.nav-button:hover svg {
+  @apply text-gray-800;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.nav-button:focus {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
