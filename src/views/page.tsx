@@ -36,14 +36,13 @@ const Page: React.FC = () => {
                 className="absolute inset-0 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 opacity-30 blur-lg"></div>
             <div className="relative z-10">
                 <Nav pages={pages.map(p => p.name)} onPageChange={handlePageChange} currentPage={currentPage}/>
-                <div className="page-container pt-16">
+                <div className="page-container pt-16 ">
                     {pages.map((page, index) => (
                         <div key={index} className={`page ${currentPage === index ? 'active' : ''}`}>
                             {React.cloneElement(page.component, {onPageChange: handleNavigation})}
                         </div>
                     ))}
                 </div>
-                <Footer/>
             </div>
         </div>
     );
