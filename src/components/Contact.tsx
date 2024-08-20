@@ -23,6 +23,9 @@ const Contact: React.FC<{onPageChange:(direction : 'prev' | 'next')=>void}> = ({
             .then(
                 () => {
                     setStatusMessage({ type: 'success', content: 'Message envoyé avec succès !' });
+                    setTimeout(()=>{
+                        setStatusMessage({ type: null, content: '' });
+                    },2000)
                     form.current!.reset();
                 },
                 (error) => {
