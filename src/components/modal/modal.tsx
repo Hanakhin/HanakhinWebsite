@@ -76,7 +76,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, description, url,
                     </div>
                 )}
                 <p className="text-center">
-                    Image {currentImageIndex + 1} of {images.length}
+                    Image {currentImageIndex + 1} sur {images.length}
                 </p>
                 <p className="text-center text-sm text-gray-500 mt-2">
                     Cliquez sur l'image pour passer en mode plein écran
