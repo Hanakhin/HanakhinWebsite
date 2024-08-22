@@ -25,6 +25,8 @@ const skillsData: Skill[] = [
     { name: "Unreal Engine", icon: "/PortfolioSerious/icons/ue5.svg", level: 70, url: "https://www.unrealengine.com/" },
     { name: "WordPress", icon: "/PortfolioSerious/icons/wp.svg", level: 70, url: "https://www.wordpress.fr/" },
     { name: "Tailwind", icon: "/PortfolioSerious/icons/tw.svg", level: 70, url: "https://www.tailwind.fr/" },
+    { name: "MongoDB", icon: "/PortfolioSerious/icons/mongo.svg", level: 70, url: "https://www.mongodb.com/fr-fr" },
+    { name: "Mysql", icon: "/PortfolioSerious/icons/mysql.svg", level: 70, url: "https://www.mysql.com/fr/" },
 ];
 
 // Components
