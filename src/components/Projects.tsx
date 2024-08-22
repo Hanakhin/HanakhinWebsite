@@ -16,6 +16,7 @@ const projectsData: Project[] = [
     { name: "VideoGameTs Project", language: "React/Ts // M.E.R.N stack", imgUrl: "/PortfolioSerious/projectsImg/VideoGameTs/homepage.png", description: "Projet personnel , qui m'as permis d'apprendre a utiliser firebase avec react/ts", url:"https://github.com/Hanakhin/VideoGameApp" },
     { name: "Exctinguisher Gestion Project", language: "PHP/Symfony", imgUrl: "/PortfolioSerious/projectsImg/exctincteurTpSymfonyV2/homepage.png", description: "Projet réalisé lui aussi a l'Idem dans le cadre d'un tp Symfony", url:"https://github.com/Hanakhin/symfonyPerso" },
     { name: "CRUD Project", language: "React/Ts // M.E.R.N stack", imgUrl: "/PortfolioSerious/projectsImg/CrudProject/homepage.png", description: "Projet personnel qui m'as servi a apprendre a gerer le systeme de CRUD sur mongoDB en react/ts", url:"https://github.com/Hanakhin/VideoGameAppTs" },
+    { name: "Transat Reservation Project", language: "Symfony/Mongodb", imgUrl: "/PortfolioSerious/projectsImg/Transat/homepage.png", description: "Projet réalisé dans le cadre de l'apprentissage de symfony lié a Mongodb", url:"https://github.com/Hanakhin/TransatAppSymfoMongo" },
 ];
 
 const ProjectsSection: React.FC<{onPageChange:(direction : 'prev' | 'next')=>void}> = ({onPageChange}) => {
