@@ -5,9 +5,11 @@ interface ModalProps {
     onClose: () => void;
     title: string;
     description: string;
+    url:string;
+
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, description }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, description,url }) => {
     if (!isOpen) return null;
 
     return (
@@ -18,6 +20,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, description }) =>
                 </button>
                 <h2 className="text-2xl font-bold mb-4">{title}</h2>
                 <p>{description}</p>
+                <p>Github repo : <a href={url} target={"_blank"} className={"hover:text-blue-500"}>{title}</a></p>
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { FaFileDownload, FaArrowRight } from 'react-icons/fa';
 import * as THREE from 'three';
-import Footer from "./Footer.tsx";
 
 interface HomeProps {
     onPageChange: (index: number) => void;

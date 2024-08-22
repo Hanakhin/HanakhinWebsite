@@ -6,9 +6,11 @@ interface Project {
     language: string;
     imgUrl: string;
     description: string;
+    link:string;
+    url:string;
 }
 
-const ProjectCard: React.FC<Project> = ({ name, language, imgUrl, description }) => {
+const ProjectCard: React.FC<Project> = ({ name, language, imgUrl, description,url }) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
     const handleOpenModal = (): void => {
@@ -34,6 +36,7 @@ const ProjectCard: React.FC<Project> = ({ name, language, imgUrl, description })
                 onClose={handleCloseModal}
                 title={name}
                 description={description}
+                url={url}
             />
         </div>
     );
