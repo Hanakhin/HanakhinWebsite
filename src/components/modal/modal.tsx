@@ -63,13 +63,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, description, url,
                         />
                         <button
                             onClick={prevImage}
-                            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
+                            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 bg-opacity-50 rounded-full p-2"
                         >
                             &#8249;
                         </button>
                         <button
                             onClick={nextImage}
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2"
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 bg-opacity-50 rounded-full p-2"
                         >
                             &#8250;
                         </button>
