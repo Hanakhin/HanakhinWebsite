@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -12,6 +12,15 @@
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+/* Ajustement pour les écrans mobiles */
+@media (max-width: 768px) {
+  .glass {
+    background: rgba(255, 255, 255, 0.4); /* Augmenter légèrement l'opacité */
+    backdrop-filter: blur(4px); /* Réduire le blur */
+    -webkit-backdrop-filter: blur(4px);
+  }
 }
 
 .page-container {

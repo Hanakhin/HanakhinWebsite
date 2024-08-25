@@ -6,7 +6,6 @@ interface Project {
     language: string;
     imgUrl: string;
     description: string;
-    link:string;
     url:string;
     images:[];
 }
