@@ -52,21 +52,11 @@ const Contact: React.FC<{onPageChange:(direction : 'prev' | 'next')=>void}> = ({
                     )}
                     <form ref={form} onSubmit={sendEmail}>
                         <div className="mb-4">
-                            <label htmlFor="from_name" className="block text-black mb-2">Nom</label>
+                            <label htmlFor="from_name" className="block text-black mb-2">Email</label>
                             <input
                                 id="from_name"
-                                type="text"
-                                name="from_name"
-                                className="glass w-full p-2 rounded bg-white bg-opacity-40 text-black"
-                                required
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="from_email" className="block text-black mb-2">Email</label>
-                            <input
-                                id="from_email"
                                 type="email"
-                                name="from_email"
+                                name="from_name"
                                 className="glass w-full p-2 rounded bg-white bg-opacity-40 text-black"
                                 required
                             />
